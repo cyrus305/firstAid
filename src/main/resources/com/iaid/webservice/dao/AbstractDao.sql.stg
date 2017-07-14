@@ -1,0 +1,21 @@
+group AbstractDao;
+
+insert(table_name, column_names, values) ::= <<
+INSERT INTO <table_name> ( <column_names> ) VALUES ( <values> )
+>>
+
+update(table_name, statement, id) ::= <<
+UPDATE <table_name> SET <statement> WHERE id = <id>
+>>
+
+delete(table_name, id) ::= <<
+DELETE FROM <table_name> WHERE id = <id>
+>>
+
+get(table_name, relation, condition) ::= <<
+SELECT <relation> FROM <table_name> WHERE <condition>
+>>
+
+getCategory(query) ::= <<
+SELECT *, image_url AS imageUrl FROM category <query>
+>>

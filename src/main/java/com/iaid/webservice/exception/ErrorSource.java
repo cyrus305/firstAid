@@ -1,0 +1,5 @@
+package com.iaid.webservice.exception;
+
+public enum ErrorSource {
+  URI_ERROR, FIELD_ERROR, UNKNOWN_ERROR, PARAMETER_MISSING, PARAMETER_ERROR, DOCUMENT_ERROR, AUTHENTICATION_ERROR
+}

@@ -1,0 +1,47 @@
+defaultName: "${DW_DEFAULT_NAME:-Stranger}"
+server:
+  rootPath: '/api/*'
+#  softNofileLimit: 1000
+#  hardNofileLimit: 1000
+  applicationConnectors:
+    - type: http
+      port: 8080
+    #- type: https
+     #port: 8443
+      #keyStorePath: example.keystore
+      #keyStorePassword: example
+      #validateCerts: false
+      #validatePeers: false
+    #this requires the alpn-boot library on the JVM's boot classpath
+    #- type: h2
+    #  port: 8445
+    #  keyStorePath: example.keystore
+    #  keyStorePassword: example
+    #  validateCerts: false
+    #  validatePeers: false
+  adminConnectors:
+    - type: http
+      port: 8081
+    #- type: https
+      #port: 8444
+      #keyStorePath: example.keystore
+      #keyStorePassword: example
+      #validateCerts: false
+      #alidatePeers: false
+template: "hello, %s"
+
+# Database settings.
+database:
+
+  # the name of your JDBC driver
+  driverClass: com.mysql.jdbc.Driver
+
+  # the username
+  user: root
+
+  # the password
+  password: root
+
+  # the JDBC URL
+  url: "jdbc:mysql://localhost:3306/iaid?zeroDateTimeBehavior=convertToNull"
+
