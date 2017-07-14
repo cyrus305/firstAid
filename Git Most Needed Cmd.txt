@@ -1,0 +1,26 @@
+If you want to create a branch from the current branch
+git checkout -b {your_local_branch_name} 
+
+you want a branch from a remote branch, you can try
+ git checkout -b {your_local_branch_name} origin/<remote_branch_name>
+
+If you are done with changes you can add the file.
+git add .
+
+Then do a commit locally
+git commit -m 'your commit message'
+
+When you want to push to remote repo
+git push origin <your_local_branch_name>
+
+Checking out branches/local or remote both
+git checkout -b bug_fixes 
+
+or If you want to create a branch from a remote branch say development
+git checkout -b bug_fixes origin/development
+
+See what are new changes in repo
+git fetch
+
+Anytime you want to update your branch from any other branch say develop.
+git pull origin develop
